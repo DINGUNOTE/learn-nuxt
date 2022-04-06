@@ -20,8 +20,11 @@
 import { FETCH_CART_ITEMS } from '@/store';
 
 export default {
-  asyncData({ store }) {
-    store.dispatch(FETCH_CART_ITEMS);
+  // asyncData({ store }) {
+  //   store.dispatch(FETCH_CART_ITEMS);
+  // },
+  async fetch() {
+    await this.$store.dispatch(FETCH_CART_ITEMS);
   },
 };
 </script>
