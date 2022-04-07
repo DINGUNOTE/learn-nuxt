@@ -40,9 +40,11 @@ export default {
     port: process.env.NODE_ENV === 'production' ? null : 5000,
   },
 
-  vue: {
-    config: {
-      dvetools: false,
-    },
+  // env config
+  env: {
+    baseURL:
+      process.env.NODE_ENV === 'production'
+        ? 'https://my-json-server.typicode.com/dingunote/learn-nuxt-api'
+        : 'http://localhost:3000',
   },
 };
