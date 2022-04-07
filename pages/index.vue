@@ -37,10 +37,11 @@
 <script>
 import SearchInput from '@/components/SearchInput.vue';
 import { fetchProducts, fetchProductsByKeyword } from '@/api';
+
 export default {
   components: { SearchInput },
   async asyncData() {
-    const response = await fetchProducts;
+    const response = await fetchProducts();
     const products = response.data.map(item => {
       return { ...item, imageUrl: `${item.imageUrl}?random=${Math.random()}` };
     });
