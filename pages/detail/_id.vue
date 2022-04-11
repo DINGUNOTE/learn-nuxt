@@ -38,12 +38,6 @@ export default {
         content: '이 상품은 ~~입니다.',
       },
     ],
-    link: [
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap',
-      },
-    ],
   },
 
   methods: {
